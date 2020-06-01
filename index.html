@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora MercadoLivre</title>
-</head>
-<body>
-    <h1>Starter</h1>
-</body>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Calculadora MercadoLivre</title>
+	</head>
+	<body>
+		<h1>Calcula preço MercadoLivre</h1>
+		<div class="valorDesejado">
+			<label for="valorDesejado">Valor desejado:</label>
+			<input type="tel" name="valorDesejado" id="valorDesejado" />
+		</div>
+
+		<div class="valorFrete">
+			<label for="valorFrete">Valor frete:</label>
+			<input type="tel" name="valorFrete" id="valorFrete" />
+		</div>
+
+		<div class="valorCalculadoClassico"></div>
+		<div class="valorCalculadoPremium"></div>
+		<script src="src/js/script.js"></script>
+	</body>
 </html>
