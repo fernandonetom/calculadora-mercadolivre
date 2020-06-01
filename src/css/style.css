@@ -1,0 +1,26 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+body {
+	background-color: #ebebeb;
+}
+header {
+	background-color: #fff159;
+	padding: 20px;
+	margin-bottom: 40px;
+}
+section {
+	background-color: #ffffff;
+	width: 1005;
+	max-width: 700px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 30px;
+	margin: 0 auto;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}

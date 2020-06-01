@@ -4,6 +4,9 @@ document.addEventListener("readystatechange", function () {
 		let inputFrete = document.getElementById("valorFrete");
 		let classico = document.getElementById("classico");
 		let premium = document.getElementById("premium");
+		let valorCalculado = document.getElementById("valorCalculado");
+
+		valorCalculado.style.display = "none";
 
 		localStorage.getItem("valorFrete")
 			? (inputFrete.value = localStorage.getItem("valorFrete"))
@@ -17,17 +20,22 @@ document.addEventListener("readystatechange", function () {
 
 		inputDesejado.addEventListener("input", () => {
 			valorDesejado = parseFloat(inputDesejado.value);
-			if (valorDesejado > 120) {
-				valorDesejado =
-					valorDesejado + 5 + parseFloat(localStorage.getItem("valorFrete"));
-			} else {
-				valorDesejado = valorDesejado + 5;
-			}
-			let calculaClassico = (valorDesejado / 0.89).toFixed(2);
-			let calculaPremium = (valorDesejado / 0.84).toFixed(2);
+			if (inputDesejado.value != "") {
+				if (valorDesejado > 120) {
+					valorDesejado =
+						valorDesejado + 5 + parseFloat(localStorage.getItem("valorFrete"));
+				} else {
+					valorDesejado = valorDesejado + 5;
+				}
+				let calculaClassico = (valorDesejado / 0.89).toFixed(2);
+				let calculaPremium = (valorDesejado / 0.84).toFixed(2);
 
-			classico.innerHTML = "Anúncio Clássico: R$" + calculaClassico;
-			premium.innerHTML = "Anúncio Premium: R$" + calculaPremium;
+				classico.innerHTML = "Anúncio Clássico: R$" + calculaClassico;
+				premium.innerHTML = "Anúncio Premium: R$" + calculaPremium;
+				valorCalculado.style.display = "flex";
+			} else {
+				valorCalculado.style.display = "none";
+			}
 		});
 		inputFrete.addEventListener("input", salvarFrete);
 	}

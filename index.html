@@ -3,23 +3,30 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+		<link rel="stylesheet" href="src/css/style.css" />
 		<title>Calculadora MercadoLivre</title>
 	</head>
 	<body>
-		<h1>Calcula preço MercadoLivre</h1>
-		<div class="valorDesejado">
-			<label for="valorDesejado">Valor desejado:</label>
-			<input type="tel" name="valorDesejado" id="valorDesejado" />
-		</div>
+		<header>
+			Calculadora de preço MercadoLivre
+		</header>
 
-		<div class="valorFrete">
-			<label for="valorFrete">Valor do frete grátis:</label>
-			<input type="tel" name="valorFrete" id="valorFrete" />
-		</div>
+		<section>
+			<div class="valorDesejado">
+				<label for="valorDesejado">Valor desejado:</label>
+				<input type="tel" name="valorDesejado" id="valorDesejado" />
+			</div>
 
-		<div id="classico" class="valorCalculadoClassico"></div>
-		<div id="premium" class="valorCalculadoPremium"></div>
+			<div class="valorFrete">
+				<label for="valorFrete">Valor do frete grátis:</label>
+				<input type="tel" name="valorFrete" id="valorFrete" />
+			</div>
+		</section>
+
+		<section id="valorCalculado">
+			<div id="classico" class="valorCalculadoClassico"></div>
+			<div id="premium" class="valorCalculadoPremium"></div>
+		</section>
 		<script src="src/js/script.js"></script>
 	</body>
 </html>
