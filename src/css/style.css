@@ -24,3 +24,38 @@ section {
 	border-radius: 5px;
 	margin-bottom: 20px;
 }
+.inputGroup {
+	display: flex;
+	align-items: center;
+}
+.inputGroup input {
+	text-align: right;
+	margin-left: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px;
+	transition: all ease-in-out 0.2s;
+}
+#valorCalculado {
+	transition: all ease-in-out 0.3s;
+}
+.inputGroup input:focus {
+	background-color: #f8f19f;
+}
+@media (max-width: 700px) {
+	.inputGroup,
+	#valorCalculado div {
+		width: 100%;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+	.inputGroup:first-child,
+	#valorCalculado div:first-child {
+		padding-bottom: 20px;
+		border-bottom: 1px solid #ccc;
+	}
+	#valorCalculado {
+		flex-direction: column;
+		text-align: center;
+	}
+}
